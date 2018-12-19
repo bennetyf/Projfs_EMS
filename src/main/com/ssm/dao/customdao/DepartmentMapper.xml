@@ -3,4 +3,24 @@
 
 <mapper namespace="com.ssm.dao.customdao.DepartmentMapper">
 
+    <resultMap id="allDepts" type="com.ssm.pojo.custompojo.Department">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="dt_name" jdbcType="VARCHAR" property="dtName" />
+        <result column="dt_createTime" jdbcType="DATE" property="dtCreatetime" />
+        <result column="dt_responsibility" jdbcType="VARCHAR" property="dtResponsibility" />
+        <result column="count" property="numEmployee"/>
+    </resultMap>
+
+    <select id="queryAllDepartment" resultMap="allDepts">
+        SELECT
+            tb_department.*, COUNT(tb_employee.id) AS count
+        FROM
+            tb_department
+        LEFT JOIN tb_employee ON tb_department.id = tb_employee.em_departmentId
+        GROUP BY
+            tb_department.id
+        ORDER BY
+            tb_department.id
+    </select>
+
 </mapper>

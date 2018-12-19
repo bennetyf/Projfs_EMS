@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.customdao.ManagerMapper">
+
+    <resultMap id="allByName" type="com.ssm.pojo.custompojo.Manager">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="account" jdbcType="VARCHAR" property="account" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="managerLevel" jdbcType="VARCHAR" property="managerlevel" />
+    </resultMap>
+
+    <select id="queryAllByName" parameterType="string" resultMap="allByName">
+        SELECT * FROM tb_manager
+        WHERE  tb_manager.account LIKE #{name};
+    </select>
+
+</mapper>

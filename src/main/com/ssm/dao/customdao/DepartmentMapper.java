@@ -1,7 +1,10 @@
 package com.ssm.dao.customdao;
 
-import com.ssm.pojo.custompojo.DepartmentQueryVo;
+import com.ssm.dao.TbDepartmentMapper;
+import com.ssm.pojo.custompojo.Department;
 
-public interface DepartmentMapper {
-    DepartmentQueryVo queryDepartment();
+import java.util.List;
+
+public interface DepartmentMapper extends TbDepartmentMapper {
+    List<Department> queryAllDepartment();
 }

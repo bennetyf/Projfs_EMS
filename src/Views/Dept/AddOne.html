@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Add Department</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 m-auto">
+                <div class="d-flex justify-content-center align-items-center w-100" style="height: 650px">
+                    <form action="addSubmission" method="post" class="w-100">
+                        <table class="table table-bordered">
+                            <tbody class="text-center">
+                                <tr style="display:none">
+                                    <td><input type="text" name="id" th:value="${dept.id}"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-success text-white">Department Name:</td>
+                                    <td><input type="text" class="w-100" name="dtName" th:value="${dept.dtName}"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-success text-white">CreateTime:</td>
+                                    <td><input type="date" class="w-100" name="dtCreatetime" th:value="${dept.createtime}"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-success text-white">Description:</td>
+                                    <td style="height: 250px">
+                                        <textarea class="w-100 h-100" name="dtResponsibility"
+                                                  th:text="${dept.dtResponsibility}"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="float-right">
+                            <input type="submit" class="btn btn-success btn-lg" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
