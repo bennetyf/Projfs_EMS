@@ -20,12 +20,12 @@
 
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
-        <property name="loginUrl" value="/EMS/login"/>
-        <property name="successUrl" value="/EMS/login/success"/>
-        <property name="unauthorizedUrl" value="/EMS/login"/>
+        <property name="loginUrl" value="/ems/login"/>
+        <property name="successUrl" value="/ems/login/success"/>
+        <property name="unauthorizedUrl" value="/ems/login"/>
         <property name="filterChainDefinitions">
             <value>
-                /EMS/login = anon
+                /ems/login = anon
             </value>
         </property>
     </bean>

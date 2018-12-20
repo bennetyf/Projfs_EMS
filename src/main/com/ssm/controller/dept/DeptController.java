@@ -47,13 +47,7 @@ public class DeptController {
     @RequestMapping("/update")
     public String deptUpdateOne(@RequestParam("id") Integer id, RedirectAttributes model){
         Department temp = null;
-        try {
-            temp = deptSer.findById(id);
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+        temp = deptSer.findById(id);
         model.addFlashAttribute("dept",temp);
         return "redirect:add";
     }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DeptService {
     List<Department> findAllDepts();
-    Department findById(Integer id) throws InvocationTargetException, IllegalAccessException;
+    Department findById(Integer id);
     void deleteById(Integer id);
     void updateById(Integer id, Department deptVo);
     void insertOneDept(Department deptVo);

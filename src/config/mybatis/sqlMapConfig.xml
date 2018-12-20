@@ -9,8 +9,4 @@
         <package name="com.ssm.pojo.custompojo"/>
     </typeAliases>
 
-    <!--<mappers>-->
-        <!--<package name="com.ssm.dao"/>-->
-    <!--</mappers>-->
-
 </configuration>

@@ -1,5 +1,8 @@
 package com.ssm.pojo;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.ssm.pojo.custompojo.Department;
+
 import java.util.Date;
 
 public class TbDepartment {
@@ -10,6 +13,7 @@ public class TbDepartment {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Department.Views.QueryView.class)
     private Integer id;
 
     /**
@@ -19,6 +23,7 @@ public class TbDepartment {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Department.Views.QueryView.class)
     private String dtName;
 
     /**
@@ -28,6 +33,7 @@ public class TbDepartment {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Department.Views.DetailsView.class)
     private Date dtCreatetime;
 
     /**
@@ -37,6 +43,7 @@ public class TbDepartment {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Department.Views.QueryView.class)
     private String dtResponsibility;
 
     /**

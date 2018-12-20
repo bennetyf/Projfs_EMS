@@ -15,11 +15,11 @@
             var password = $("#password").val();
             $.ajax({
                 type: "POST",
-                url: "login/logincheck",
+                url: "logincheck",
                 data: "username="+username+"&password=" + password,
                 success: function(msg) {
                     if (msg.result === "Login Success") {
-                        window.location.assign("/EMS/login/success");
+                        window.location.assign("/ems/login/success");
                     } else {
                         alert(msg.result);
                     }
