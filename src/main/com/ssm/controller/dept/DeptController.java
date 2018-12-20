@@ -2,6 +2,7 @@ package com.ssm.controller.dept;
 
 import com.ssm.pojo.custompojo.Department;
 import com.ssm.service.dept.DeptService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -46,14 +47,7 @@ public class DeptController {
 
     @RequestMapping("/update")
     public String deptUpdateOne(@RequestParam("id") Integer id, RedirectAttributes model){
-        Department temp = null;
-        try {
-            temp = deptSer.findById(id);
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+        Department temp = deptSer.findById(id);
         model.addFlashAttribute("dept",temp);
         return "redirect:add";
     }

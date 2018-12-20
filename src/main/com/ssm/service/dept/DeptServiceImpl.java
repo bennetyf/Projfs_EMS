@@ -39,10 +39,16 @@ public class DeptServiceImpl implements DeptService{
     }
 
     @Override
-    public Department findById(Integer id) throws InvocationTargetException, IllegalAccessException {
+    public Department findById(Integer id) {
         TbDepartment Tbdept = departmentMapper.selectByPrimaryKey(id);
         Department dept = new Department();
-        BeanUtils.copyProperties(dept,Tbdept);
+        try {
+            BeanUtils.copyProperties(dept,Tbdept);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
         dept.setCreatetime(dateFormat.format(dept.getDtCreatetime()));
         return dept;
     }

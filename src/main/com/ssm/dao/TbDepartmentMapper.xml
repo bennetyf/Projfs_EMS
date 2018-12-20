@@ -125,7 +125,7 @@
       This element was generated on Mon Dec 17 21:12:54 AEDT 2018.
     -->
     delete from tb_department
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER};
   </delete>
   <delete id="deleteByExample" parameterType="com.ssm.pojo.TbDepartmentExample">
     <!--

@@ -31,7 +31,7 @@
               class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
                 <property name="prefix" value="/Views/" />
                 <property name="suffix" value=".html" />
-                <property name="templateMode" value="HTML5" />
+                <property name="templateMode" value="HTML" />
                 <property name="cacheable" value="false"/>
         </bean>
 

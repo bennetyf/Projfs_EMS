@@ -6,7 +6,5 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
-
-        <!--<bean id="deptService" class="com.ssm.service.Dept.DeptServiceImpl"/>-->
-        <context:component-scan base-package="com.ssm.service"/>
+    <bean name="jsonMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
 </beans>
