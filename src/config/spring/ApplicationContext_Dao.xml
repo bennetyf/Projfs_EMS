@@ -30,7 +30,11 @@
     </bean>
 
     <!-- Scan All Mappers -->
-    <mybatis:scan base-package="com.ssm.dao"/>
-    <mybatis:scan base-package="com.ssm.dao.customdao"/>
+    <!--<mybatis:scan base-package="com.ssm.dao"/>-->
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.ssm.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
 
 </beans>
