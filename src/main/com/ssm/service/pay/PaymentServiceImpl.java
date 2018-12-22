@@ -30,13 +30,14 @@ public class PaymentServiceImpl implements PaymentService{
         return paymentMapper;
     }
 
+    @Inject
     public void setPaymentMapper(PaymentMapper paymentMapper) {
         this.paymentMapper = paymentMapper;
     }
 
     @Override
     public List<Payment> findAllPayment() {
-        List<Payment> paymentList = paymentMapper.findAllPayment();
+        List<Payment> paymentList = paymentMapper.queryAllPayment();
         for(Payment payment:paymentList){
             payment.setPaymonth(dateFormat.format(payment.getPayMonth()));
         }

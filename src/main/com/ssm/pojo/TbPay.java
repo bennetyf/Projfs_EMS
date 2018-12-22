@@ -1,5 +1,8 @@
 package com.ssm.pojo;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.ssm.pojo.custompojo.Payment;
+
 import java.util.Date;
 
 public class TbPay {
@@ -10,6 +13,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Integer id;
 
     /**
@@ -19,6 +23,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private String payEmnumber;
 
     /**
@@ -28,6 +33,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private String payEmname;
 
     /**
@@ -37,6 +43,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.DetailsView.class)
     private Date payMonth;
 
     /**
@@ -46,6 +53,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Integer payBasemoney;
 
     /**
@@ -55,6 +63,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Integer payOvertime;
 
     /**
@@ -64,6 +73,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Integer payAge;
 
     /**
@@ -73,6 +83,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Float payCheck;
 
     /**
@@ -82,6 +93,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Float payAbsent;
 
     /**
@@ -91,6 +103,7 @@ public class TbPay {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Payment.Views.QueryView.class)
     private Float paySafety;
 
     /**

@@ -10,7 +10,7 @@
         <result column="tn_time" jdbcType="DATE" property="tnTime"/>
         <result column="tn_address" jdbcType="VARCHAR" property="tnAddress"/>
         <result column="tn_join" jdbcType="VARCHAR" property="tnJoin"/>
-        <result column="tn_bz" jdbcType="TEXT" property="tnBz"/>
+        <result column="tn_bz" jdbcType="LONGVARCHAR" property="tnBz"/>
     </resultMap>
 
     <select id="queryAllTrain" resultMap="allResults">

@@ -7,7 +7,7 @@
         <result column="pp_title" jdbcType="VARCHAR" property="ppTitle"/>
         <result column="pp_type" jdbcType="VARCHAR" property="ppType"/>
         <result column="pp_money" jdbcType="DOUBLE" property="ppMoney"/>
-        <result column="pp_content" jdbcType="TEXT" property="ppContent"/>
+        <result column="pp_content" jdbcType="LONGVARCHAR" property="ppContent"/>
         <result column="pp_time" jdbcType="DATE" property="ppTime"/>
     </resultMap>
 

@@ -7,6 +7,7 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.util.List;
@@ -18,7 +19,7 @@ public class PPServiceImpl implements PPService {
     }
 
     @Inject
-    public void setPpMapper(PPMapper ppMapper) {
+    public void setPpMapper(@Named("PPMapper") PPMapper ppMapper) {
         this.ppMapper = ppMapper;
     }
 

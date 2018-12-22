@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.dao.customdao.InvitejobMapper">
-
-    <select id="queryAllInvited" resultType="com.ssm.pojo.custompojo.Invitejob">
+    <resultMap id="allResults" type="com.ssm.pojo.custompojo.Invitejob">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="firstname" jdbcType="VARCHAR" property="firstname" />
+        <result column="lastname" jdbcType="VARCHAR" property="lastname" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="born" jdbcType="VARCHAR" property="born" />
+        <result column="job" jdbcType="VARCHAR" property="job" />
+        <result column="specialty" jdbcType="VARCHAR" property="specialty" />
+        <result column="experience" jdbcType="VARCHAR" property="experience" />
+        <result column="teachSchool" jdbcType="VARCHAR" property="teachschool" />
+        <result column="afterSchool" jdbcType="VARCHAR" property="afterschool" />
+        <result column="tel" jdbcType="VARCHAR" property="tel" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+        <result column="createtime" jdbcType="DATE" property="createtime" />
+        <result column="isstock" jdbcType="INTEGER" property="isstock" />
+        <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    </resultMap>
+    <select id="queryAllInvited" resultMap="allResults">
       SELECT * FROM tb_invitejob
     </select>
 
