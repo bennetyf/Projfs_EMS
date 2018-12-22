@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.customdao.TrainMapper">
+    <resultMap id="allResults" type="com.ssm.pojo.custompojo.Train">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="tn_man" jdbcType="VARCHAR" property="tnMan"/>
+        <result column="tn_title" jdbcType="VARCHAR" property="tnTitle"/>
+        <result column="tn_content" jdbcType="VARCHAR" property="tnContent"/>
+        <result column="tn_time" jdbcType="DATE" property="tnTime"/>
+        <result column="tn_address" jdbcType="VARCHAR" property="tnAddress"/>
+        <result column="tn_join" jdbcType="VARCHAR" property="tnJoin"/>
+        <result column="tn_bz" jdbcType="TEXT" property="tnBz"/>
+    </resultMap>
+
+    <select id="queryAllTrain" resultMap="allResults">
+        SELECT * FROM tb_train
+    </select>
+
+</mapper>

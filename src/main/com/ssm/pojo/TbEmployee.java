@@ -1,5 +1,8 @@
 package com.ssm.pojo;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.ssm.pojo.custompojo.Employee;
+
 import java.util.Date;
 
 public class TbEmployee {
@@ -10,6 +13,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private Integer id;
 
     /**
@@ -19,6 +23,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emSerialnumber;
 
     /**
@@ -28,6 +33,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emFirstname;
 
     /**
@@ -37,6 +43,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emLastname;
 
     /**
@@ -46,6 +53,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emSex;
 
     /**
@@ -55,6 +63,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private Integer emAge;
 
     /**
@@ -64,6 +73,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emIdcard;
 
     /**
@@ -73,6 +83,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emBorn;
 
     /**
@@ -82,6 +93,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emNation;
 
     /**
@@ -91,6 +103,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emMarriage;
 
     /**
@@ -100,6 +113,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emVisage;
 
     /**
@@ -109,6 +123,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emAncestralhome;
 
     /**
@@ -118,6 +133,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emTel;
 
     /**
@@ -127,6 +143,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emAddress;
 
     /**
@@ -136,6 +153,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emAfterschool;
 
     /**
@@ -145,6 +163,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emSpeciality;
 
     /**
@@ -154,6 +173,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emCulture;
 
     /**
@@ -163,6 +183,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.DetailsView.class)
     private Date emStarttime;
 
     /**
@@ -172,6 +193,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private Integer emDepartmentid;
 
     /**
@@ -181,6 +203,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emTypework;
 
     /**
@@ -190,7 +213,8 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
-    private Date emCreattime;
+    @JsonView(Employee.Views.DetailsView.class)
+    private Date emCreatetime;
 
     /**
      *
@@ -199,6 +223,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emCreatename;
 
     /**
@@ -208,6 +233,7 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Employee.Views.QueryView.class)
     private String emBz;
 
     /**
@@ -698,20 +724,20 @@ public class TbEmployee {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
-    public Date getEmCreattime() {
-        return emCreattime;
+    public Date getEmCreatetime() {
+        return emCreatetime;
     }
 
     /**
      * This method was generated by MyBatis Generator.
      * This method sets the value of the database column tb_employee.em_creatTime
      *
-     * @param emCreattime the value for tb_employee.em_creatTime
+     * @param emCreatetime the value for tb_employee.em_creatTime
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
-    public void setEmCreattime(Date emCreattime) {
-        this.emCreattime = emCreattime;
+    public void setEmCreatetime(Date emCreatetime) {
+        this.emCreatetime = emCreatetime;
     }
 
     /**

@@ -27,7 +27,7 @@
     <result column="em_startTime" jdbcType="DATE" property="emStarttime" />
     <result column="em_departmentId" jdbcType="INTEGER" property="emDepartmentid" />
     <result column="em_typeWork" jdbcType="VARCHAR" property="emTypework" />
-    <result column="em_creatTime" jdbcType="DATE" property="emCreattime" />
+    <result column="em_createTime" jdbcType="DATE" property="emCreatetime" />
     <result column="em_createName" jdbcType="VARCHAR" property="emCreatename" />
     <result column="em_bz" jdbcType="VARCHAR" property="emBz" />
   </resultMap>
@@ -107,7 +107,7 @@
     -->
     id, em_serialNumber, em_firstName, em_lastName, em_sex, em_age, em_IDCard, em_born, 
     em_nation, em_marriage, em_visage, em_ancestralHome, em_tel, em_address, em_afterSchool, 
-    em_speciality, em_culture, em_startTime, em_departmentId, em_typeWork, em_creatTime, 
+    em_speciality, em_culture, em_startTime, em_departmentId, em_typeWork, em_createTime,
     em_createName, em_bz
   </sql>
   <select id="selectByExample" parameterType="com.ssm.pojo.TbEmployeeExample" resultMap="BaseResultMap">
@@ -172,7 +172,7 @@
       em_marriage, em_visage, em_ancestralHome, 
       em_tel, em_address, em_afterSchool, 
       em_speciality, em_culture, em_startTime, 
-      em_departmentId, em_typeWork, em_creatTime, 
+      em_departmentId, em_typeWork, em_createTime,
       em_createName, em_bz)
     values (#{id,jdbcType=INTEGER}, #{emSerialnumber,jdbcType=VARCHAR}, #{emFirstname,jdbcType=VARCHAR}, 
       #{emLastname,jdbcType=VARCHAR}, #{emSex,jdbcType=VARCHAR}, #{emAge,jdbcType=INTEGER}, 
@@ -180,7 +180,7 @@
       #{emMarriage,jdbcType=VARCHAR}, #{emVisage,jdbcType=VARCHAR}, #{emAncestralhome,jdbcType=VARCHAR}, 
       #{emTel,jdbcType=VARCHAR}, #{emAddress,jdbcType=VARCHAR}, #{emAfterschool,jdbcType=VARCHAR}, 
       #{emSpeciality,jdbcType=VARCHAR}, #{emCulture,jdbcType=VARCHAR}, #{emStarttime,jdbcType=DATE}, 
-      #{emDepartmentid,jdbcType=INTEGER}, #{emTypework,jdbcType=VARCHAR}, #{emCreattime,jdbcType=DATE}, 
+      #{emDepartmentid,jdbcType=INTEGER}, #{emTypework,jdbcType=VARCHAR}, #{emCreatetime,jdbcType=DATE},
       #{emCreatename,jdbcType=VARCHAR}, #{emBz,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.ssm.pojo.TbEmployee">
@@ -251,8 +251,8 @@
       <if test="emTypework != null">
         em_typeWork,
       </if>
-      <if test="emCreattime != null">
-        em_creatTime,
+      <if test="emCreatetime != null">
+        em_createTime,
       </if>
       <if test="emCreatename != null">
         em_createName,
@@ -322,8 +322,8 @@
       <if test="emTypework != null">
         #{emTypework,jdbcType=VARCHAR},
       </if>
-      <if test="emCreattime != null">
-        #{emCreattime,jdbcType=DATE},
+      <if test="emCreatetime != null">
+        #{emCreatetime,jdbcType=DATE},
       </if>
       <if test="emCreatename != null">
         #{emCreatename,jdbcType=VARCHAR},
@@ -412,8 +412,8 @@
       <if test="record.emTypework != null">
         em_typeWork = #{record.emTypework,jdbcType=VARCHAR},
       </if>
-      <if test="record.emCreattime != null">
-        em_creatTime = #{record.emCreattime,jdbcType=DATE},
+      <if test="record.emCreateTime != null">
+        em_createTime = #{record.emCreatetime,jdbcType=DATE},
       </if>
       <if test="record.emCreatename != null">
         em_createName = #{record.emCreatename,jdbcType=VARCHAR},
@@ -453,7 +453,7 @@
       em_startTime = #{record.emStarttime,jdbcType=DATE},
       em_departmentId = #{record.emDepartmentid,jdbcType=INTEGER},
       em_typeWork = #{record.emTypework,jdbcType=VARCHAR},
-      em_creatTime = #{record.emCreattime,jdbcType=DATE},
+      em_createTime = #{record.emCreatetime,jdbcType=DATE},
       em_createName = #{record.emCreatename,jdbcType=VARCHAR},
       em_bz = #{record.emBz,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -525,8 +525,8 @@
       <if test="emTypework != null">
         em_typeWork = #{emTypework,jdbcType=VARCHAR},
       </if>
-      <if test="emCreattime != null">
-        em_creatTime = #{emCreattime,jdbcType=DATE},
+      <if test="emCreatetime != null">
+        em_createTime = #{emCreatetime,jdbcType=DATE},
       </if>
       <if test="emCreatename != null">
         em_createName = #{emCreatename,jdbcType=VARCHAR},
@@ -563,7 +563,7 @@
       em_startTime = #{emStarttime,jdbcType=DATE},
       em_departmentId = #{emDepartmentid,jdbcType=INTEGER},
       em_typeWork = #{emTypework,jdbcType=VARCHAR},
-      em_creatTime = #{emCreattime,jdbcType=DATE},
+      em_createTime = #{emCreatetime,jdbcType=DATE},
       em_createName = #{emCreatename,jdbcType=VARCHAR},
       em_bz = #{emBz,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

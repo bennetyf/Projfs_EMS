@@ -45,8 +45,8 @@ public class LoginController {
     public String loginCheck(HttpServletRequest req){
         JSONObject obj = new JSONObject() ;
         String errInfo ="";
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
+        String username = req.getParameter("login_uname");
+        String password = req.getParameter("login_pwd");
 
         Subject subject = SecurityUtils.getSubject();
         Session session = subject.getSession();

@@ -1,5 +1,8 @@
 package com.ssm.pojo;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.ssm.pojo.custompojo.Train;
+
 import java.util.Date;
 
 public class TbTrain {
@@ -10,6 +13,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private Integer id;
 
     /**
@@ -19,6 +23,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private String tnMan;
 
     /**
@@ -28,6 +33,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private String tnTitle;
 
     /**
@@ -37,6 +43,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private String tnContent;
 
     /**
@@ -46,6 +53,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.DetailsView.class)
     private Date tnTime;
 
     /**
@@ -55,6 +63,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private String tnAddress;
 
     /**
@@ -64,6 +73,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private String tnJoin;
 
     /**
@@ -73,6 +83,7 @@ public class TbTrain {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Train.Views.QueryView.class)
     private String tnBz;
 
     /**

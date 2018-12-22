@@ -9,4 +9,8 @@
 
         <!--<bean id="deptService" class="com.ssm.service.Dept.DeptServiceImpl"/>-->
         <context:component-scan base-package="com.ssm.service"/>
+
+        <bean id="dateFormat" class="java.text.SimpleDateFormat">
+                <constructor-arg name="pattern" value="yyyy-MM-dd"/>
+        </bean>
 </beans>

@@ -16,7 +16,7 @@
             $.ajax({
                 type: "POST",
                 url: "login/logincheck",
-                data: "username="+username+"&password=" + password,
+                data: "login_uname="+username+"&login_pwd=" + password,
                 success: function(msg) {
                     if (msg.result === "Login Success") {
                         window.location.assign("/EMS/login/success");

@@ -1,5 +1,8 @@
 package com.ssm.pojo;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.ssm.pojo.custompojo.PrizePunish;
+
 import java.util.Date;
 
 public class TbPrizePunish {
@@ -10,6 +13,7 @@ public class TbPrizePunish {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(PrizePunish.Views.QueryView.class)
     private Integer id;
 
     /**
@@ -19,6 +23,7 @@ public class TbPrizePunish {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(PrizePunish.Views.QueryView.class)
     private String ppTitle;
 
     /**
@@ -28,6 +33,7 @@ public class TbPrizePunish {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(PrizePunish.Views.QueryView.class)
     private String ppType;
 
     /**
@@ -37,6 +43,7 @@ public class TbPrizePunish {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(PrizePunish.Views.QueryView.class)
     private Double ppMoney;
 
     /**
@@ -46,6 +53,7 @@ public class TbPrizePunish {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(PrizePunish.Views.DetailsView.class)
     private Date ppTime;
 
     /**
@@ -55,6 +63,7 @@ public class TbPrizePunish {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(PrizePunish.Views.QueryView.class)
     private String ppContent;
 
     /**
