@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ssm.pojo.custompojo.PrizePunish;
 import com.ssm.service.prize_punish.PPService;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -64,9 +65,9 @@ public class PPControllerREST {
         ppService.deleteById(id);
     }
 
-    @RequestMapping("/getbyid")
+    @RequestMapping("/getbyid/{id}")
     @JsonView(PrizePunish.Views.QueryView.class)
-    public PrizePunish getById(@RequestParam("id") Integer id){
+    public PrizePunish getById(@PathVariable("id") Integer id){
         return ppService.getById(id);
     }
 

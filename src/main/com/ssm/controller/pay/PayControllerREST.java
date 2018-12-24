@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ssm.pojo.custompojo.Payment;
 import com.ssm.service.pay.PaymentService;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -63,9 +64,9 @@ public class PayControllerREST {
         paymentService.deleteById(id);
     }
 
-    @RequestMapping(value = "/getbyid",produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/getbyid/{id}",produces = "application/json;charset=UTF-8")
     @JsonView(Payment.Views.QueryView.class)
-    public Payment getById(@RequestParam("id") Integer id){
+    public Payment getById(@PathVariable("id") Integer id){
         return paymentService.getById(id);
     }
 

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ssm.pojo.custompojo.Train;
 import com.ssm.service.train.TrainService;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -64,9 +65,9 @@ public class TrainControllerREST {
         trainService.deleteById(id);
     }
 
-    @RequestMapping("/getbyid")
+    @RequestMapping("/getbyid/{id}")
     @JsonView(Train.Views.QueryView.class)
-    public Train getById(@RequestParam("id") Integer id){
+    public Train getById(@PathVariable("id") Integer id){
         return trainService.getById(id);
     }
 

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ssm.pojo.custompojo.Employee;
 import com.ssm.service.emp.EmployeeService;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -65,9 +66,9 @@ public class EmpControllerREST {
         employService.deleteById(id);
     }
 
-    @RequestMapping(value = "/getbyid",produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/getbyid/{id}",produces = "application/json;charset=UTF-8")
     @JsonView(Employee.Views.QueryView.class)
-    public Employee getById(@RequestParam("id") Integer id){
+    public Employee getById(@PathVariable("id") Integer id){
         return employService.findById(id);
     }
 

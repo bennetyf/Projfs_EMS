@@ -1,5 +1,8 @@
 package com.ssm.pojo;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.ssm.pojo.custompojo.Manager;
+
 public class TbManager {
     /**
      *
@@ -8,6 +11,7 @@ public class TbManager {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Manager.Views.QueryView.class)
     private Integer id;
 
     /**
@@ -17,6 +21,7 @@ public class TbManager {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Manager.Views.QueryView.class)
     private String account;
 
     /**
@@ -26,6 +31,7 @@ public class TbManager {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Manager.Views.DetailsView.class)
     private String password;
 
     /**
@@ -35,6 +41,7 @@ public class TbManager {
      *
      * @mbg.generated Mon Dec 17 21:12:54 AEDT 2018
      */
+    @JsonView(Manager.Views.DetailsView.class)
     private String managerlevel;
 
     /**

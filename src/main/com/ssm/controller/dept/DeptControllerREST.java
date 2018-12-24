@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ssm.pojo.custompojo.Department;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -82,9 +83,9 @@ public class DeptControllerREST {
 //        return deptQueryAll();
     }
 
-    @RequestMapping("/getbyid")
+    @RequestMapping("/getbyid/{id}")
     @JsonView(Department.Views.QueryView.class)
-    public Department getById(@RequestParam("id") Integer id){
+    public Department getById(@PathVariable("id") Integer id){
         return deptSer.findById(id);
     }
 
