@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.customdao.EmployeeMapper">
+    <resultMap id="allEmployee" type="com.ssm.pojo.custompojo.Employee">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="em_serialNumber" jdbcType="VARCHAR" property="emSerialnumber"/>
+        <result column="em_firstName" jdbcType="VARCHAR" property="emFirstname"/>
+        <result column="em_lastName" jdbcType="VARCHAR" property="emLastname"/>
+        <result column="em_sex" jdbcType="VARCHAR" property="emSex"/>
+        <result column="em_age" jdbcType="INTEGER" property="emAge"/>
+        <result column="em_IDCard" jdbcType="VARCHAR" property="emIdcard"/>
+        <result column="em_born" jdbcType="VARCHAR" property="emBorn"/>
+        <result column="em_nation" jdbcType="VARCHAR" property="emNation"/>
+        <result column="em_marriage" jdbcType="VARCHAR" property="emMarriage"/>
+        <result column="em_visage" jdbcType="VARCHAR" property="emVisage"/>
+        <result column="em_ancestralHome" jdbcType="VARCHAR" property="emAncestralhome"/>
+        <result column="em_tel" jdbcType="VARCHAR" property="emTel"/>
+        <result column="em_address" jdbcType="VARCHAR" property="emAddress"/>
+        <result column="em_afterSchool" jdbcType="VARCHAR" property="emAfterschool"/>
+        <result column="em_speciality" jdbcType="VARCHAR" property="emSpeciality"/>
+        <result column="em_culture" jdbcType="VARCHAR" property="emCulture"/>
+        <result column="em_startTime" jdbcType="DATE" property="emStarttime"/>
+        <result column="em_departmentId" jdbcType="INTEGER" property="emDepartmentid"/>
+        <result column="em_typeWork" jdbcType="VARCHAR" property="emTypework"/>
+        <result column="em_createTime" jdbcType="DATE" property="emCreatetime"/>
+        <result column="em_createName" jdbcType="VARCHAR" property="emCreatename"/>
+        <result column="em_bz" jdbcType="VARCHAR" property="emBz"/>
+    </resultMap>
+
+    <select id="queryAllEmployee" resultMap="allEmployee">
+      SELECT * FROM tb_employee;
+    </select>
+
+</mapper>

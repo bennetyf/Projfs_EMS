@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>QueryDepartments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-3 mt-3">List of Departments</h2>
+            <table class="table table-bordered table-striped">
+                <thead class="bg-info text-center">
+                    <tr>
+                        <th>Department ID</th>
+                        <th>Department Name</th>
+                        <th>Create Time</th>
+                        <th>Number of Employees</th>
+                        <th>Description</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr th:each="dept:${deptList}">
+                        <td th:text="${dept.id}">1</td>
+                        <td th:text="${dept.dtName}">JavaWeb</td>
+                        <td th:text="${dept.createtime}">2017-12-01</td>
+                        <td th:text="${dept.numEmployee}">2</td>
+                        <td th:text="${dept.dtResponsibility}">Programming</td>
+                        <td class="w-100 d-inline-flex justify-content-around align-items-between">
+                            <a th:href="@{delete(id=${dept.id})}">Delete</a>
+                            <a th:href="@{update(id=${dept.id})}">Update</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 ml-auto text-right">
+            <a href="add">
+                <button class="btn btn-outline-info">
+                    <span class="text-primary">Add A Department</span>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

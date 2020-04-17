@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--<classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/projfs_ems?useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false"
+                        userId="travis"
+                        password="1991Ross">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.dbinverse.pojo" targetProject="./src/main">
+            <property name="enableSubPackages" value="false" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.dbinverse.dao"  targetProject="./src/main">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dbinverse.dao"  targetProject="./src/main">
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <!--<table tableName="tb_department" />-->
+        <!--<table tableName="tb_employee" />-->
+        <table tableName="tb_invitejob" />
+        <!--<table tableName="tb_manager" />-->
+        <!--<table tableName="tb_pay"/>-->
+        <!--<table tableName="tb_prize_punish"/>-->
+        <!--<table tableName="tb_train"/>-->
+
+    </context>
+</generatorConfiguration>

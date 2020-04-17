@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Configuration for Shiro -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="shiroRealm"/>
+    </bean>
+
+    <bean id="cookie" class="org.apache.shiro.web.servlet.SimpleCookie" />
+
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+        <property name="globalSessionTimeout" value="3600000"/>
+        <property name="sessionIdCookieEnabled" value="true"/>
+        <property name="sessionIdCookie" ref="cookie"/>
+    </bean>
+
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/EMS/login"/>
+        <property name="successUrl" value="/EMS/login/success"/>
+        <property name="unauthorizedUrl" value="/EMS/login"/>
+        <property name="filterChainDefinitions">
+            <value>
+                /EMS/login = anon
+            </value>
+        </property>
+    </bean>
+</beans>

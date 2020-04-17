@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        function doLogin(){
+
+            var username = $("#username").val();
+            var password = $("#password").val();
+            $.ajax({
+                type: "POST",
+                url: "login/logincheck",
+                data: "login_uname="+username+"&login_pwd=" + password,
+                success: function(msg) {
+                    if (msg.result === "Login Success") {
+                        window.location.assign("/EMS/login/success");
+                    } else {
+                        alert(msg.result);
+                    }
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+<form action="logincheck" name="loginForm">
+
+    UserName:<input type="text" name = "username" id = "username" />
+    <br />
+    <br />
+    PassWord: <input type="text" name = "password" id = "password" />
+    <br />
+    <br />
+    <button type="button" name = "submitForm" id = "submitForm" onclick="doLogin()">Login</button>
+
+</form>
+
+</body>
+</html>
